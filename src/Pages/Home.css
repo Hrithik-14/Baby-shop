@@ -1,0 +1,55 @@
+
+*{
+  border: 0;
+  margin: 0;
+}
+
+
+body{
+    background-color:white;
+    ;
+}
+.baby-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    background-color: white
+  }
+  
+  .baby-para {
+    max-width: 500px;
+  }
+  
+  .baby-para h1 {
+    font-size: 2.5rem;
+    color: rgb(117, 111, 111);
+  }
+  
+  .baby-para p {
+    font-size: 1.2rem;
+    color:  rgb(117, 111, 111);
+  }
+  
+  .shop-now {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(87, 143, 202);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .shop-now:hover {
+    background-color:rgb(56, 121, 192);
+  }
+  
+  .babyimg img {
+    max-width: 400px;
+    height: auto;
+  }
+  
