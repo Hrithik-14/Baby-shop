@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.css'; 
 import Register from '../pages/Register';
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+import { use } from 'react';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [email,setEmail]  = useState('')
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
+    const api_user = "http://localhost:5000/users"
+
+    useEffect(() => {
+        axios.get(api_user)
+          .then(response => setProducts(response.data))
+          .catch(error => console.error("Error fetching data:", error));
+      }, [])
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -63,4 +73,7 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
 
