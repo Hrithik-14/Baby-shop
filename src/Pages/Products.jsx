@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Navbar from '../components/Navbar'
 
 
 function Products() {
   return (
+
     <>
     <div className='product'>
       <img style={{width:'300px', height:'300px'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZGl3rg3pnDNJfYc60LMMNavOYNPpKdzLQ2A&s" alt="" />
@@ -19,4 +20,6 @@ function Products() {
   )
 }
 export default Products
+
+
 

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
+    const [email,setEmail]  = useState('')
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
 
@@ -31,8 +32,8 @@ const Login = () => {
         <input
         type="text"
         placeholder="Email address"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
         required
         />
         <input
