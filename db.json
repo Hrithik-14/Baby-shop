@@ -1,4 +1,31 @@
 {
-    "users": []
-  }
-  
+  "products": [
+    {
+      "id": 1,
+      "name": "Baby Stroller",
+      "price": 150,
+      "description": "A comfortable and safe stroller for your baby."
+    },
+    {
+      "id": 2,
+      "name": "Baby Bottle",
+      "price": 15,
+      "description": "Ergonomic design with easy grip."
+    },
+    {
+      "id": 3,
+      "name": "Diapers Pack",
+      "price": 30,
+      "description": "Pack of high-quality disposable diapers."
+    }
+  ],
+  "users": [
+    {
+      "id": "ae91",
+      "name": "Hrithik A Suresh",
+      "email": "hrithikelayur12@gmail.com",
+      "password": "hriuhdn"
+    }
+  ],
+  "orders": []
+}
