@@ -52,3 +52,6 @@ const Cart = ({ cartItems = [], clearCart }) => {
 export default Cart;
 
 
+
+
+
