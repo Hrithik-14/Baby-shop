@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import ProductList from "./Products";
 
 function Home() {
 

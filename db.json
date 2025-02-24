@@ -4,7 +4,8 @@
       "id": 1,
       "name": "Baby Stroller",
       "price": 150,
-      "description": "A comfortable and safe stroller for your baby."
+      "description": "A comfortable and safe stroller for your baby.",
+      "image1": "https://websitedemos.net/baby-store-04/wp-content/uploads/sites/750/2020/12/baby-store-product-img-10.jpg"
     },
     {
       "id": 2,
@@ -21,10 +22,17 @@
   ],
   "users": [
     {
-      "id": "ae91",
+      "id": "1",
       "name": "Hrithik A Suresh",
       "email": "hrithikelayur12@gmail.com",
-      "password": "hriuhdn"
+      "password": "hrithik@123"
+    },
+    {
+      "id": "2",
+      "name": "amal",
+      "email": "amal12@gmail.com",
+      "password": "1234"
+
     }
   ],
   "orders": []
