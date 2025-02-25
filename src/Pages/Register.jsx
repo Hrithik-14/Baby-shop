@@ -13,12 +13,12 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.get(`http://localhost:5000/users?email=${user.email}`);
+    const res = await axios.get(`http://localhost:3005/users?email=${user.email}`);
     
     if (res.data.length > 0) {
       alert("User already exists!");
     } else {
-      await axios.post("http://localhost:5000/users", user);
+      await axios.post("http://localhost:3005/users", user);
       alert("Registration successful!");
       navigate("/login");
     }

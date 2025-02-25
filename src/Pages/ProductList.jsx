@@ -1,30 +1,53 @@
 
-import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import './ProductList.css';
+import { BiCartAdd } from "react-icons/bi";
+// import Cart from './Carts';
+// import Payment from './Payment';
+import { useNavigate } from "react-router-dom";
 
-const ProductList = ({ addToCart }) => {
+const ProductList = () => {
+  const navigate = useNavigate()
   const [products, setProducts] = useState([]);
-
+  console.log(products);
+  
   useEffect(() => {
-
-    axios.get('http://localhost:5000/products')
-      .then((res) => setProducts(res.data))
-      .catch((err) => console.error('Error fetching products:', err));
+    const fetchproduct = async () => {
+      try {
+        const res = await axios.get("http://localhost:3001/products");
+        console.log(res.data);
+        setProducts(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchproduct();
   }, []);
 
   return (
-    <div style={{ padding: '1rem' }}>
-      <h2>Baby Products</h2>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {products.map(product => (
-          <div key={product.id} style={{ border: '1px solid #ddd', margin: '10px', padding: '10px', width: '250px' }}>
-            <h3>{product.name}</h3>
+    <div className="container">
+      <h1>Products</h1>
+      {products.map(product => (
+        <div key={product.id} className="product">
+          
+          <img src={product.image1} alt={product.name} />
+          <div className="product-details">
+            <h2>{product.name}</h2>
             <p>{product.description}</p>
-            <p><strong>${product.price}</strong></p>
-            <button onClick={() => addToCart(product)}>Add to Cart</button>
+            <p className="price">${product.price}</p>
+            <BiCartAdd onClick={() =>{
+              navigate('/carts')
+            }} style={{height:'20px', width: '50px'}} />
+            
           </div>
-        ))}
-      </div>
+          <button onClick={() =>{
+            navigate('/payment')
+          }}  style={{height:'30px', width: '40px', borderRadius:'5px', background:' #84E1A8'}}>Buy</button>
+        </div>
+     
+
+      ))}
     </div>
   );
 };
