@@ -9,6 +9,7 @@ import ProductList from "./Pages/ProductList.jsx";
 import Register from "./Pages/Register.jsx";
 import Payment from "./Pages/Payment.jsx";
 
+
 function App() {
   return (
     <>
@@ -18,10 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductList/>}/>
-        <Route path="/carts" element={<Cart/>}/>
+        <Route path="/cart" element={<Cart/>}/>
         <Route path="/payment" element={<Payment/>}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/login" element={<Login />} />
+   
       </Routes>
     </Router>
     </>

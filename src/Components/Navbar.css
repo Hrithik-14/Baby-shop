@@ -3,19 +3,11 @@
     margin:0;
 }
 
-/* .nav{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    
-    padding: 15px;
-   
-    
-} */
+
 
     .navbar {
-        background-color: rgb(197, 186, 255)
-        ; /* bg-blue-500 */
+        background-color: rgb(197, 186, 255);
+       
         padding: 1rem; 
         color: white; 
         display: flex; 
@@ -58,8 +50,3 @@
       .nav-link:hover {
         text-decoration: underline; 
       }
-/* .baby{
-display: flex;
-justify-content: space-between;
-
-}  */

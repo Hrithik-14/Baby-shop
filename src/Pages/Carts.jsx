@@ -1,64 +1,83 @@
-import { useState } from "react";
-import axios from "axios";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Carts.css';
 
-const Cart = ({ cartItems = [], clearCart }) => {
-  const [paymentStatus, setPaymentStatus] = useState("");
+const Carts = () => {
+  const navigate = useNavigate();
+  const [cartItems, setCartItems] = useState([]);
+  const [loading, setLoading] = useState(true); 
+  const userId = localStorage.getItem('userId');
 
-  const totalPrice = cartItems.reduce((sum, item) => sum + (item.price || 0), 0).toFixed(2);
-
-  const handlePayment = async () => {
-    if (totalPrice <= 0) {
-      setPaymentStatus("Your cart is empty!");
+  useEffect(() => {
+    if (!userId) {
+      navigate('/login'); 
       return;
     }
 
-    try {
-      const res = await axios.post("http://localhost:3001/orders", { amount: totalPrice });
-
-      if (res.status === 201 || res.status === 200) {
-        setPaymentStatus("Payment Successful!");
-        clearCart?.();
-      } else {
-        setPaymentStatus("Payment Failed!");
+    const fetchCart = async () => {
+      try {
+        const res = await axios.get(`http://localhost:4001/users/${userId}`);
+        setCartItems(res.data.cart || []);
+      } catch (error) {
+        console.error('Error fetching cart:', error);
+        alert('Failed to fetch cart. Please try again.');
+      } finally {
+        setLoading(false); 
       }
+    };
+
+    fetchCart();
+  }, [userId, navigate]);
+
+  const removeFromCart = async (id) => {
+    try {
+   
+      const updatedCart = cartItems.filter(item => item.id !== id);
+      setCartItems(updatedCart);
+
+ 
+      await axios.patch(`http://localhost:4001/users/${userId}`, { cart: updatedCart });
+
+      alert('Item removed from cart!');
     } catch (error) {
-      setPaymentStatus("Payment Failed! Please try again.");
+      console.error('Error removing item from cart:', error);
+      alert('Failed to remove item. Please try again.');
+     
+      setCartItems(cartItems);
     }
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <h2>Your Cart</h2>
-      {cartItems.length > 0 ? (
-        cartItems.map((item, index) => (
-          <div key={index} style={{ marginBottom: "10px" }}>
-            <span>{item.name} - ${parseFloat(item.price).toFixed(2)}</span>
+    <div className="cart-container">
+      <h1>Your Carts</h1>
+      {loading ? (
+        <p>Loading...</p>
+      ) : cartItems.length === 0 ? (
+        <p>Your cart is empty</p>
+      ) : (
+        cartItems.map(item => (
+          <div key={item.id} className="cart-item">
+            <img src={item.image1} alt={item.name} />
+            <div className="cart-details">
+              <h2>{item.name}</h2>
+              <p>{item.description}</p>
+              <p className="price">${item.price}</p>
+              <button onClick={() => removeFromCart(item.id)} className="remove-btn">
+                Remove
+              </button>
+            </div>
           </div>
         ))
-      ) : (
-        <p>Your cart is empty.</p>
       )}
 
-      <h3>Total: ${totalPrice}</h3>
-      <button 
-        onClick={handlePayment} 
-        style={{
-          padding: "10px 15px",
-          backgroundColor: "#28a745",
-          color: "white",
-          border: "none",
-          cursor: "pointer",
-          borderRadius: "5px",
-          marginTop: "10px"
-        }}
-      >
-        Proceed to Payment
-      </button>
-      {paymentStatus && <p style={{ marginTop: "10px" }}>{paymentStatus}</p>}
+      {cartItems.length > 0 && (
+        <button className="checkout-btn" onClick={() => navigate('/payment')}>
+          Proceed to Payment
+        </button>
+      )}
     </div>
   );
 };
 
-export default Cart;
-
-
+export default Carts;

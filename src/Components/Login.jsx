@@ -1,24 +1,48 @@
+
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import axios from 'axios';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail]  = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [loading, setLoading] = useState(false); 
+  const [error, setError] = useState(''); 
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log('Username:', username);
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Remember Me:', rememberMe);
+    setLoading(true); 
+    setError(''); 
+
+    try {
     
-  
-    navigate('/');
+      const res = await axios.get(`http://localhost:4001/users?email=${email}&password=${password}`);
+      
+      if (res.data.length > 0) {
+        
+        localStorage.setItem('userId', res.data[0].id);
+
+        
+        if (rememberMe) {
+          localStorage.setItem('rememberedEmail', email);
+        } else {
+          localStorage.removeItem('rememberedEmail');
+        }
+
+        navigate('/products');
+      } else {
+        setError('Invalid email or password.');
+      }
+    } catch (error) {
+      console.error('Error logging in:', error);
+      setError('An error occurred. Please try again later.');
+    } finally {
+      setLoading(false); 
+    }
   };
 
   return (
@@ -26,14 +50,7 @@ const Login = () => {
       <div className='image'>
         <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/baby-shop-2108349-1773810.png?f=webp&w=512" alt="Login Icon" />
       </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
+      <form onSubmit={handleLogin}>
         <input
           type="text"
           placeholder="Email address"
@@ -57,16 +74,17 @@ const Login = () => {
             />{' '}
             Remember Me
           </label>
-          <button type="submit">Log In</button>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Logging in...' : 'Log In'}
+          </button>
         </div>
+        {error && <p className="error-message">{error}</p>} 
       </form>
     </div>
   );
 };
 
 export default Login;
-
-
 
 
 
