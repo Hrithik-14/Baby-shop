@@ -23,7 +23,7 @@ const Payment = () => {
     <div className="form-section">
       <h2>Customer Information</h2>
       <div className="form-group">
-        <label htmlFor="username">Username or Email Address *</label>
+        <label htmlFor="">Username or Email Address *</label>
         <input
           type="text"
           id="username"
@@ -36,7 +36,7 @@ const Payment = () => {
 
       <h2>Billing Details</h2>
       <div className="form-group">
-        <label htmlFor="firstName">First Name *</label>
+        <label htmlFor="">First Name *</label>
         <input
           type="text"
           id="firstName"
@@ -58,7 +58,7 @@ const Payment = () => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="country">Country</label>
+        <label htmlFor="">Country</label>
         <select
           id="country"
           value={country}

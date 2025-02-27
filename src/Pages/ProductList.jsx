@@ -52,7 +52,7 @@ const ProductList = () => {
 
   return (
     <div className="container">
-      <h1>Products</h1>
+      <h1>Baby Products</h1>
       {products.map((product) => (
         <div key={product.id} className="product">
           <img src={product.image1} alt={product.name} />
@@ -68,7 +68,7 @@ const ProductList = () => {
           </div>
 
   
-          <button
+          {/* <button
             onClick={async () => {
               await addToCart(product);
               navigate('/payment');
@@ -76,7 +76,7 @@ const ProductList = () => {
             style={{ height: '30px', width: '50px', borderRadius: '5px', background: 'green', color: 'white' }}
           >
             Buy
-          </button>
+          </button> */}
         </div>
       ))}
     </div>

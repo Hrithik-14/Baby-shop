@@ -12,6 +12,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false); 
   const [error, setError] = useState(''); 
   const navigate = useNavigate();
+  
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -77,6 +78,9 @@ const Login = () => {
           <button type="submit" disabled={loading}>
             {loading ? 'Logging in...' : 'Log In'}
           </button>
+          <button onClick={()=>{
+            navigate('/register')
+          }}>Sign Up</button>
         </div>
         {error && <p className="error-message">{error}</p>} 
       </form>
