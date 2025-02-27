@@ -123,10 +123,10 @@ const Login = () => {
       if (res.data.length > 0) {
         const user = res.data[0];
 
-        // Store user details
+       
         localStorage.setItem('userId', user.id);
         localStorage.setItem('userName', user.name);
-        localStorage.setItem('userRole', user.role); // Save user role
+        localStorage.setItem('userRole', user.role); 
         setUserName(user.name);
 
         if (rememberMe) {
@@ -135,11 +135,11 @@ const Login = () => {
           localStorage.removeItem('rememberedEmail');
         }
 
-        // Redirect based on role
+       
         if (user.role === 'admin') {
-          navigate('/admin'); // Redirect admin to admin page
+          navigate('/admin'); 
         } else {
-          navigate('/products'); // Redirect regular users to products page
+          navigate('/products'); 
         }
 
       } else {
@@ -159,7 +159,7 @@ const Login = () => {
         <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/baby-shop-2108349-1773810.png?f=webp&w=512" alt="Login Icon" />
       </div>
 
-      {userName && <h2>Welcome, {userName}!</h2>} {/* Display user name if logged in */}
+      {userName && <h2>Welcome, {userName}!</h2>} 
 
       <form onSubmit={handleLogin}>
         <input
@@ -197,6 +197,7 @@ const Login = () => {
 };
 
 export default Login;
+
 
 
 
