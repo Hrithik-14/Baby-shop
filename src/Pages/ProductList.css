@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
+    padding-bottom: 300px;
     /* margin: 0 auto; */
     /* padding: 20px; */
     margin-top: 800px;
@@ -14,6 +15,7 @@
   
   h1 {
     /* display: flex; */
+    
     text-align: center;
     justify-content: center;
     /* margin-bottom: 40px; */
@@ -60,4 +62,3 @@
   }
   
 
-  
