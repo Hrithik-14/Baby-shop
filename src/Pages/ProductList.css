@@ -10,12 +10,13 @@
     padding-bottom: 300px;
     /* margin: 0 auto; */
     /* padding: 20px; */
-    margin-top: 800px;
+    margin-top: 20px;
+   
   }
   
-  h1 {
+  .prd {
     /* display: flex; */
-    
+    margin-top: 500px;
     text-align: center;
     justify-content: center;
     /* margin-bottom: 40px; */

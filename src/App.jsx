@@ -39,8 +39,6 @@ function App() {
         <Route path="/admin/order" element={<Order />} />
         <Route path="/admin/profile" element={<Profile />} />
         <Route path="/admin/settings" element={<Settings />} />
-
-   
       </Routes>
     </Router>
     </>

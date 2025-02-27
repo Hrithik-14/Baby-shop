@@ -39,6 +39,14 @@
   ],
   "users": [
     {
+      "id": "abc",
+      "name": "admin",
+      "role": "admin",
+      "email": "admin@gmail.com",
+      "password": "faizy"
+
+    },
+    {
       "id": "d48e",
       "name": "faizy",
       "email": "faizy@gmail.com",
