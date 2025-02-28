@@ -162,8 +162,17 @@
       "name": "danish",
       "email": "danish@gmail.com",
       "password": "1234",
-      "cart": []
+      "cart": [
+        {
+          "id": "1",
+          "name": "Baby Stroller",
+          "price": 150,
+          "description": "A comfortable and safe stroller for your baby.",
+          "image1": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvSAf_rD2GczPls9limaL-JuK27gK1UIdCYajcR2GWzBq8s4uGEPsZAbN6wIT8JUesQc9J1gtiu6JA5i7eih_lVGtYlnFDlNmvkHWjnnQc",
+          "image2": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRFy8H71r9IXloRECh9oyYz418jN7jZQfrcOGf67nQBG0WAzwriHR9Nb3PYNgZkFQUzZWn509KruPuwtRakIpFwzsj3w5W1SmZv9bYEaERQpDtaBtk3kwhGgg",
+          "image3": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQeCNh5gYdat_JJr7oVcBcLFwrazNCrBCK1Z-VUac39glPF5Hhw95O9PlEGuzFV8He42_DbvIE0pTNGt4bIJII0ndR-BNkzpA"
+        }
+      ]
     }
   ]
 }
-

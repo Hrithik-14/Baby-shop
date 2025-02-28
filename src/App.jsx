@@ -50,9 +50,8 @@
 
 // export default App;
 
-
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 import Login from "./components/Login.jsx";
 import Home from "./Pages/Home.jsx";
@@ -70,10 +69,14 @@ import Profile from "./Admin/Profile.jsx";
 import AdminNav from "./Pages/AdminNav.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
-function App() {
+const AppContent = () => {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
   return (
-    <Router>
-      <Navbar />
+    <>
+      {/* Show Navbar only if it's not an Admin Route */}
+      {!isAdminRoute && <Navbar />}
 
       <Routes>
         <Route path="/search" element={<Search />} />
@@ -97,6 +100,14 @@ function App() {
         {/* Unauthorized Access Page */}
         <Route path="/unauthorized" element={<h1>Unauthorized Access</h1>} />
       </Routes>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }

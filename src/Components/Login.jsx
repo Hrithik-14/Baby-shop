@@ -243,7 +243,7 @@ const Login = () => {
         }
 
         if (user.role === 'admin') {
-          navigate('/admin');
+          navigate('/adminnav');
         } else {
           navigate('/products');
         }
