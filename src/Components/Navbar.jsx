@@ -1,5 +1,4 @@
 
-
 import { Link, useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineShoppingCartCheckout } from "react-icons/md";
@@ -40,19 +39,34 @@ const Navbar = () => {
       </div>
 
       <ul className="nav-links">
-        <li><Search /></li>
-        <li><Link to="/" className="nav-link">Home</Link></li>
-        <li><Link to="/products" className="nav-link">Products</Link></li>
+        <li>
+          <Search />
+        </li>
+        <li>
+          <Link to="/" className="nav-link">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/products" className="nav-link">
+            Products
+          </Link>
+        </li>
         <li>
           <Link to="/cart" className="nav-link">
             <MdOutlineShoppingCartCheckout />
           </Link>
         </li>
         <li className="nav-link">
-          {userName ? 
-            <IoIosLogOut className="logout-btn" onClick={handleLogout}>Logout/>
-           : (
-            <Link to="/login"><FaUserCircle /></Link>
+          {userName ? (
+            <div onClick={handleLogout} style={{ cursor: "pointer" }}>
+              <IoIosLogOut className="logout-btn" />
+              Logout
+            </div>
+          ) : (
+            <Link to="/login">
+              <FaUserCircle />
+            </Link>
           )}
         </li>
       </ul>
