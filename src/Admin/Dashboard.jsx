@@ -83,7 +83,7 @@ const Dashboard = () => {
     };
 
     return (
-        <div style={styles.main}>
+        <div style={styles.main} className="main">
             <h1 style={styles.header}>Admin Dashboard</h1>
             
             <h2 style={styles.sectionHeader}>Products</h2>
