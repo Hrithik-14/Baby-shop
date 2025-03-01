@@ -67,7 +67,7 @@ function AdminNav() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/admin/settings" className="nav-link">
+            <Link to="/admin/products" className="nav-link">
             <FaProductHunt className="nav-icon"/>
               <span>Products</span>
             </Link>

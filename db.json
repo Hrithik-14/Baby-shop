@@ -8,7 +8,6 @@
       "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
       "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
       "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg"
-
     },
     {
       "id": "2",
@@ -36,16 +35,6 @@
       "image1": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/24dec2021/ZB604-1.jpg",
       "image2": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/24dec2021/ZB604-2.jpg",
       "image3": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQeCNh5gYdat_JJr7oVcBcLFwrazNCrBCK1Z-VUac39glPF5Hhw95O9PlEGuzFV8He42_DbvIE0pTNGt4bIJII0ndR-BNkzpA"
-    },
-    {
-      
-      "id": "5",
-      "name": "Baby Seat",
-      "price": 50,
-      "description": "A comfortable and safe stroller for your baby.",
-      "image1": "https://m.media-amazon.com/images/I/61+pNd4MC6L._SL1500_.jpg",
-      "image2": "https://m.media-amazon.com/images/I/71cH6aE0tbL._SL1500_.jpg",
-      "image3": "https://m.media-amazon.com/images/I/71WLh4aaR-L._SL1500_.jpg"
     },
     {
       "id": "5",

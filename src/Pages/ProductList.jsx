@@ -69,15 +69,7 @@ const ProductList = () => {
           </div>
 
   
-          {/* <button
-            onClick={async () => {
-              await addToCart(product);
-              navigate('/payment');
-            }}
-            style={{ height: '30px', width: '50px', borderRadius: '5px', background: 'green', color: 'white' }}
-          >
-            Buy
-          </button> */}
+        
         </div>
       ))}
     </div>
@@ -86,7 +78,7 @@ const ProductList = () => {
 };
 
 export default ProductList;
- 
+
 
 
 

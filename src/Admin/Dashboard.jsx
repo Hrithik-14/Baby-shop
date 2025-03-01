@@ -57,6 +57,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import './Dashboard.css';
+import { FaEye } from "react-icons/fa";
+import { FaDeleteLeft } from "react-icons/fa6";
 
 const Dashboard = () => {
     const [products, setProducts] = useState([]);
@@ -95,7 +97,7 @@ const Dashboard = () => {
                             style={styles.deleteButton} 
                             onClick={() => deleteProduct(product.id)}
                         >
-                            Delete
+                            <FaDeleteLeft />
                         </button>
                     </li>
                 ))}
@@ -110,7 +112,7 @@ const Dashboard = () => {
                             style={styles.detailsButton} 
                             onClick={() => alert(`User: ${user.name}\nOrder Details: Order #123 - 3 items`)}
                         >
-                            View Details
+                            <FaEye />
                         </button>
                     </li>
                 ))}
@@ -126,8 +128,9 @@ const styles = {
       fontFamily: 'Arial, sans-serif',
       backgroundColor: '#f9f9f9',
       borderRadius: '8px',
+    
       maxWidth: '800px',
-      margin: '0 auto',
+      marginTop: '300px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   },
   header: {
