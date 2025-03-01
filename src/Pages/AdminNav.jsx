@@ -33,21 +33,24 @@ import { CiUser } from 'react-icons/ci';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { RiAdminFill } from 'react-icons/ri';
 import './AdminNav.css';
+// import Sidebar from '../Admin/Sidebar';
+import { FaProductHunt } from "react-icons/fa";
 
 function AdminNav() {
   return (
     <div className="admin-nav">
       <nav className="nav-list">
         <ul className="nav-items">
-          <li className="nav-item">
-            <Link to="/admin" className="nav-link">
-              <RiAdminFill className="nav-icon" />
+           <li className="nav-item">
+            
+              <RiAdminFill  style={{color:'lightblue'}} />
               <span>Admin</span>
-            </Link>
-          </li>
+            
+          </li> 
+          {/* <Sidebar/> */}
           <li className="nav-item">
             <Link to="/admin/dashboard" className="nav-link">
-              <MdSpaceDashboard className="nav-icon" />
+              <MdSpaceDashboard  className="nav-icon" />
               <span>Dashboard</span>
             </Link>
           </li>
@@ -60,13 +63,13 @@ function AdminNav() {
           <li className="nav-item">
             <Link to="/admin/profile" className="nav-link">
               <CiUser className="nav-icon" />
-              <span>Profile</span>
+              <span>User</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/admin/settings" className="nav-link">
-              <IoSettingsOutline className="nav-icon" />
-              <span>Settings</span>
+            <FaProductHunt className="nav-icon"/>
+              <span>Products</span>
             </Link>
           </li>
         </ul>
