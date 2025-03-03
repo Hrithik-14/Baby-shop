@@ -123,57 +123,57 @@ const Dashboard = () => {
 
 export default Dashboard;
 const styles = {
-  main: {
-      padding: '20px',
-      fontFamily: 'Arial, sans-serif',
-      backgroundColor: '#f9f9f9',
-      borderRadius: '8px',
-    
-      maxWidth: '800px',
-      marginTop: '300px',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  },
-  header: {
-      textAlign: 'center',
-      color: '#333',
-      marginBottom: '20px',
-  },
-  sectionHeader: {
-      color: '#555',
-      borderBottom: '2px solid #ddd',
-      paddingBottom: '10px',
-      marginTop: '20px',
-  },
-  list: {
-      listStyle: 'none',
-      padding: '0',
-  },
-  listItem: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '10px',
-      margin: '10px 0',
-      backgroundColor: '#fff',
-      borderRadius: '4px',
-      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-  },
-  deleteButton: {
-      backgroundColor: '#ff4d4d',
-      color: '#fff',
-      border: 'none',
-      padding: '8px 12px',
-      borderRadius: '4px',
-      cursor: 'pointer',
-      fontSize: '14px',
-  },
-  detailsButton: {
-      backgroundColor: '#4CAF50',
-      color: '#fff',
-      border: 'none',
-      padding: '8px 12px',
-      borderRadius: '4px',
-      cursor: 'pointer',
-      fontSize: '14px',
-  },
-};
+    main: {
+        padding: '20px',
+        fontFamily: 'Arial, sans-serif',
+        backgroundColor: '#f9f9f9',
+        borderRadius: '8px',
+        
+        maxWidth: '800px',
+        marginTop: '300px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    },
+    header: {
+        textAlign: 'center',
+        color: '#333',
+        marginBottom: '20px',
+    },
+    sectionHeader: {
+        color: '#555',
+        borderBottom: '2px solid #ddd',
+        paddingBottom: '10px',
+        marginTop: '20px',
+    },
+    list: {
+        listStyle: 'none',
+        padding: '0',
+    },
+    listItem: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '10px',
+        margin: '10px 0',
+        backgroundColor: '#fff',
+        borderRadius: '4px',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    },
+    deleteButton: {
+        backgroundColor: '#ff4d4d',
+        color: '#fff',
+        border: 'none',
+        padding: '8px 12px',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        fontSize: '14px',
+    },
+    detailsButton: {
+        backgroundColor: '#4CAF50',
+        color: '#fff',
+        border: 'none',
+        padding: '8px 12px',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        fontSize: '14px',
+    },
+    };

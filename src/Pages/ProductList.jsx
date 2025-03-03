@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './ProductList.css';
 import { BiCartAdd } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductList = () => {
   const navigate = useNavigate();
@@ -53,9 +53,10 @@ const ProductList = () => {
   return (
     <div>
       <h1 className='prd'>Baby Products</h1>
+      
     <div className="container">
       {products.map((product) => (
-        <div key={product.id} className="product">
+        <Link to={`/product/${product.id}`} key={product.id} className="product">
           <img src={product.image1} alt={product.name} />
           <div className="product-details">
             <h2>{product.name}</h2>
@@ -70,7 +71,7 @@ const ProductList = () => {
 
   
         
-        </div>
+        </Link>
       ))}
     </div>
     </div>

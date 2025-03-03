@@ -19,6 +19,7 @@ import Profile from "./Admin/Profile.jsx";
 import AdminNav from "./Pages/AdminNav.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Products from "./Admin/Products.jsx";
+import ProductDetail from "./Pages/ProductDetails.jsx";
 
 const AppContent = () => {
   const location = useLocation();
@@ -37,6 +38,7 @@ const AppContent = () => {
         <Route path="/payment" element={<Payment />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
 
         
         <Route element={<ProtectedRoute allowedRoles={["admin"]} />}>
@@ -46,6 +48,7 @@ const AppContent = () => {
           <Route path="/admin/profile" element={<Profile />} />
           <Route path="/admin/products" element={<Products />} />
           <Route path="/adminnav" element={<AdminNav />} />
+          
         </Route>
 
         

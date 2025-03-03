@@ -1,4 +1,3 @@
-
 import { Link, useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineShoppingCartCheckout } from "react-icons/md";
@@ -59,9 +58,22 @@ const Navbar = () => {
         </li>
         <li className="nav-link">
           {userName ? (
-            <div onClick={handleLogout} style={{ cursor: "pointer" }}>
-              <IoIosLogOut className="logout-btn" />
-              Logout
+            <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+              <select
+                style={{ border: "none", background: "none", cursor: "pointer" }}
+                onChange={(e) => {
+                  if (e.target.value === "logout") {
+                    handleLogout();
+                  }
+                }}
+
+
+              >
+                
+                <option value="">{userName}</option>
+                
+                <option value="logout">Log Out</option>
+              </select>
             </div>
           ) : (
             <Link to="/login">
@@ -75,9 +87,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
 
 
 

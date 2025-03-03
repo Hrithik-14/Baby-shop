@@ -44,8 +44,8 @@ const Login = () => {
 
         if (user.role === 'admin') {
           navigate('/adminnav');
-        } else {
-          navigate('/products');
+        } else  {
+          navigate('/productlist');
         }
       } else {
         setError('Invalid email or password.');
@@ -104,12 +104,13 @@ const Login = () => {
                 />{' '}
                 Remember Me
               </label>
-              <button type="submit" disabled={loading}> 
-                {loading ? 'Logging in...' : 'Log In'}
+              <button type="submit" onClick={() => navigate('/productlist')} disabled={loading}> 
+                 Log In
               </button>
               <button type="button" onClick={() => navigate('/register')}>Sign Up</button>
             </div>
             {error && <p className="error-message">{error}</p>}
+            
           </form>
         </>
       )}
