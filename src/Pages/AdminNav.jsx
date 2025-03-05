@@ -33,27 +33,24 @@ import { CiUser } from 'react-icons/ci';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { RiAdminFill } from 'react-icons/ri';
 import './AdminNav.css';
+
 // import Sidebar from '../Admin/Sidebar';
 import { FaProductHunt } from "react-icons/fa";
+import TopNav from './TopNav';
 
 function AdminNav() {
   return (
+    <>
+    
     <div className="admin-nav">
       <nav className="nav-list">
         <ul className="nav-items">
-           <li className="nav-item">
+          <li className="nav-item">
             
               <RiAdminFill  style={{color:'lightblue'}} />
               <span>Admin</span>
             
           </li> 
-          {/* <Sidebar/> */}
-          <li className="nav-item">
-            <Link to="/admin/dashboard" className="nav-link">
-              <MdSpaceDashboard  className="nav-icon" />
-              <span>Dashboard</span>
-            </Link>
-          </li>
           <li className="nav-item">
             <Link to="/admin/order" className="nav-link">
               <AiOutlineUnorderedList className="nav-icon" />
@@ -75,9 +72,11 @@ function AdminNav() {
         </ul>
       </nav>
     </div>
+    </>
   );
 }
 
 export default AdminNav;
+
 
 

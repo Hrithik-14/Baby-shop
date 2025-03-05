@@ -1,20 +1,26 @@
 .admin-nav {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  padding: 1rem;
-  height: 100%;
   position: fixed;
-  left: 0px;
-  top: 0px;
+  top: 0;
+  left: 0;
+  width: 250px; /* Set a fixed width */
+  height: 100vh; /* Full height */
+  background-color: #2c3e50; /* Dark background */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
-  margin: 0;
+  width: 100%;
+  list-style: none;
   padding: 0;
 }
 
 .nav-items {
-  list-style: none;
+  width: 100%;
   padding: 0;
 }
 
@@ -46,3 +52,5 @@
 .nav-link span {
   font-size: 1rem;
 }
+
+

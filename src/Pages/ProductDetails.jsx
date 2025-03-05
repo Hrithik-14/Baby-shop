@@ -6,7 +6,7 @@ import { BiCartAdd } from "react-icons/bi";
 import './ProductDetails.css';
 
 const ProductDetail = () => {
-  const { id } = useParams(); // Get product ID from URL
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const userId = localStorage.getItem("userId");

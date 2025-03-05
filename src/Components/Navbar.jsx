@@ -70,7 +70,7 @@ const Navbar = () => {
 
               >
                 
-                <option value="">{userName}</option>
+                <option onClick={() =>{ navigate('/login')}} value="">{userName}</option>
                 
                 <option value="logout">Log Out</option>
               </select>
@@ -87,6 +87,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
 

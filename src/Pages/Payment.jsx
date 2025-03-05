@@ -95,7 +95,7 @@ const Payment = () => {
             <input type="text" placeholder="Enter Card Number" required />
           </div>
 
-          <button type="submit" className="btn-submit">
+          <button type="submit" onClick={() =>{navigate('/paymentreport')}} className="btn-submit">
             Pay Now
           </button>
         </form>

@@ -5,7 +5,7 @@
       "name": "Baby Stroller",
       "price": 150,
       "description": "Ergonomic design with easy grip.",
-      "catagories" : "Stroller",
+      "catagories": "Stroller",
       "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
       "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
       "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg"
@@ -15,7 +15,7 @@
       "name": "Baby Bottle",
       "price": 15,
       "description": "Ergonomic design with easy grip.",
-      "catagories" : "Bootle",
+      "catagories": "Bottle",
       "image1": "https://www.bigbasket.com/media/uploads/p/xxl/40142595_1-chicco-baby-feeding-bottle-with-twin-anti-colic-system-blue-6m.jpg",
       "image2": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTpKJiQpgocWPWdcYrZLS0sXNqaPROS3LoE9E8aj7pvle80PfHe2azVAh1GFv_Bu3HxvWRQwixnx4JlXXpvHKL70HIZcIuDOy1vq-x57FtKbqIOjtWarzq6UQ",
       "image3": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRJ6D4Fi30etb5fWPa3DlNMNEQH3WBN004Hz_MUezK5aBFEkSTkzrJVcLaa6BGHybnGSDrzpFanWfHs8nKGtcCL1ERJaeSqhsTRFYFPDS_62UpW82tvc5sxIA"
@@ -25,7 +25,7 @@
       "name": "Baby Toys",
       "price": 30,
       "description": "Pack of high-quality disposable diapers.",
-      "catagories" : "Toys",
+      "catagories": "Toys",
       "image1": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089a.webp",
       "image2": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089b.webp",
       "image3": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089c.webp"
@@ -35,7 +35,7 @@
       "name": "Baby Dress",
       "price": 50,
       "description": "A comfortable and safe stroller for your baby.",
-      "catagories" : "Dress",
+      "catagories": "Dress",
       "image1": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/24dec2021/ZB604-1.jpg",
       "image2": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/24dec2021/ZB604-2.jpg",
       "image3": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQeCNh5gYdat_JJr7oVcBcLFwrazNCrBCK1Z-VUac39glPF5Hhw95O9PlEGuzFV8He42_DbvIE0pTNGt4bIJII0ndR-BNkzpA"
@@ -45,7 +45,7 @@
       "name": "Baby Book",
       "price": 50,
       "description": "A comfortable and safe stroller for your baby.",
-      "catagories" : "Book",
+      "catagories": "Book",
       "image1": "https://m.media-amazon.com/images/I/711c-uf6AFL._SL1500_.jpg",
       "image2": "https://m.media-amazon.com/images/I/71cH6aE0tbL._SL1500_.jpg",
       "image3": "https://m.media-amazon.com/images/I/71WLh4aaR-L._SL1500_.jpg"
@@ -57,42 +57,75 @@
       "name": "admin",
       "role": "admin",
       "email": "admin@gmail.com",
-      "password": "1234"
+      "password": "1234",
+      "orders": []
     },
     {
       "id": "7e71",
       "name": "hrithik",
       "email": "hrithik@gmail.com",
       "password": "1234",
-      "cart": []
+      "cart": [],
+      "orders": [
+        {
+          "id": "1",
+          "name": "Baby Stroller",
+          "price": 150,
+          "description": "Ergonomic design with easy grip.",
+          "catagories": "Stroller",
+          "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+          "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+          "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+          "userId": "7e71"
+        }
+      ]
     },
     {
       "id": "5490",
       "name": "Danish",
       "email": "danish@gmail.com",
       "password": "1234",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Baby Stroller",
+          "price": 150,
+          "description": "Ergonomic design with easy grip.",
+          "catagories": "Stroller",
+          "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+          "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+          "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg"
+        }
+      ],
+      "orders": [
+        {
+          "id": "3",
+          "name": "Baby Toys",
+          "price": 30,
+          "description": "Pack of high-quality disposable diapers.",
+          "catagories": "Toys",
+          "image1": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089a.webp",
+          "image2": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089b.webp",
+          "image3": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089c.webp",
+          "userId": "5490"
+        }
+      ]
+    },
+    {
+      "id": "8b6a",
+      "name": "hi",
+      "email": "hi@gmail.com",
+      "password": "1234",
       "cart": []
     }
   ],
   "orders": [
     {
-      "id": "2",
-      "name": "Baby Bottle",
-      "price": 15,
-      "description": "Ergonomic design with easy grip.",
-      "image1": "https://www.bigbasket.com/media/uploads/p/xxl/40142595_1-chicco-baby-feeding-bottle-with-twin-anti-colic-system-blue-6m.jpg",
-      "image2": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTpKJiQpgocWPWdcYrZLS0sXNqaPROS3LoE9E8aj7pvle80PfHe2azVAh1GFv_Bu3HxvWRQwixnx4JlXXpvHKL70HIZcIuDOy1vq-x57FtKbqIOjtWarzq6UQ",
-      "image3": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRJ6D4Fi30etb5fWPa3DlNMNEQH3WBN004Hz_MUezK5aBFEkSTkzrJVcLaa6BGHybnGSDrzpFanWfHs8nKGtcCL1ERJaeSqhsTRFYFPDS_62UpW82tvc5sxIA",
-      "userId": "7e71"
-    },
-    {
       "id": "1",
       "name": "Baby Stroller",
       "price": 150,
       "description": "Ergonomic design with easy grip.",
-      "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+      "catagories": "Stroller",
       "userId": "7e71"
     },
     {
@@ -100,49 +133,7 @@
       "name": "Baby Bottle",
       "price": 15,
       "description": "Ergonomic design with easy grip.",
-      "image1": "https://www.bigbasket.com/media/uploads/p/xxl/40142595_1-chicco-baby-feeding-bottle-with-twin-anti-colic-system-blue-6m.jpg",
-      "image2": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTpKJiQpgocWPWdcYrZLS0sXNqaPROS3LoE9E8aj7pvle80PfHe2azVAh1GFv_Bu3HxvWRQwixnx4JlXXpvHKL70HIZcIuDOy1vq-x57FtKbqIOjtWarzq6UQ",
-      "image3": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRJ6D4Fi30etb5fWPa3DlNMNEQH3WBN004Hz_MUezK5aBFEkSTkzrJVcLaa6BGHybnGSDrzpFanWfHs8nKGtcCL1ERJaeSqhsTRFYFPDS_62UpW82tvc5sxIA",
-      "userId": "7e71"
-    },
-    {
-      "id": "1",
-      "name": "Baby Stroller",
-      "price": 150,
-      "description": "Ergonomic design with easy grip.",
-      "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "userId": "7e71"
-    },
-    {
-      "id": "2",
-      "name": "Baby Bottle",
-      "price": 15,
-      "description": "Ergonomic design with easy grip.",
-      "image1": "https://www.bigbasket.com/media/uploads/p/xxl/40142595_1-chicco-baby-feeding-bottle-with-twin-anti-colic-system-blue-6m.jpg",
-      "image2": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTpKJiQpgocWPWdcYrZLS0sXNqaPROS3LoE9E8aj7pvle80PfHe2azVAh1GFv_Bu3HxvWRQwixnx4JlXXpvHKL70HIZcIuDOy1vq-x57FtKbqIOjtWarzq6UQ",
-      "image3": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRJ6D4Fi30etb5fWPa3DlNMNEQH3WBN004Hz_MUezK5aBFEkSTkzrJVcLaa6BGHybnGSDrzpFanWfHs8nKGtcCL1ERJaeSqhsTRFYFPDS_62UpW82tvc5sxIA",
-      "userId": "7e71"
-    },
-    {
-      "id": "1",
-      "name": "Baby Stroller",
-      "price": 150,
-      "description": "Ergonomic design with easy grip.",
-      "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "userId": "7e71"
-    },
-    {
-      "id": "1",
-      "name": "Baby Stroller",
-      "price": 150,
-      "description": "Ergonomic design with easy grip.",
-      "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
-      "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+      "catagories": "Bottle",
       "userId": "5490"
     },
     {
@@ -150,9 +141,30 @@
       "name": "Baby Toys",
       "price": 30,
       "description": "Pack of high-quality disposable diapers.",
-      "image1": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089a.webp",
-      "image2": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089b.webp",
-      "image3": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18889089c.webp",
+      "catagories": "Toys",
+      "userId": "5490"
+    },
+    {
+      "id": "1",
+      "name": "Baby Stroller",
+      "price": 150,
+      "description": "Ergonomic design with easy grip.",
+      "catagories": "Stroller",
+      "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+      "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+      "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+      "userId": "8b6a"
+    },
+    {
+      "id": "1",
+      "name": "Baby Stroller",
+      "price": 150,
+      "description": "Ergonomic design with easy grip.",
+      "catagories": "Stroller",
+      "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+      "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+      "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+      "quantity": 3,
       "userId": "5490"
     }
   ]
