@@ -66,3 +66,4 @@ const styles = {
 
 export default ProfileDetail;
 
+
