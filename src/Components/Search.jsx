@@ -2,6 +2,7 @@ import React from 'react'
 import { FaSearch } from 'react-icons/fa'
 
 function Search() {
+  
   return (
     <div>
         <FaSearch id = "search-icon" />

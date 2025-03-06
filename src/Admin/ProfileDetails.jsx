@@ -35,8 +35,8 @@ function ProfileDetail() {
           {user.orders.map((order) => (
             <li key={order.id} style={styles.orderItem}>
               <strong>Product:</strong> {order.name} | 
-              <strong> Price:</strong> ${order.price} | 
-              <strong> Quantity:</strong> {order.quantity} | 
+              <strong> Price:</strong> ${order.price} | <br />
+              <strong> Quantity:</strong> {order.quantity} | <br />
               <strong> Status:</strong> {order.status}
             </li>
           ))}

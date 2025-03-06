@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 import { useEffect, useState } from "react";
-import { IoIosLogOut } from "react-icons/io";
+
 import "./Navbar.css";
 import Search from "./Search";
 

@@ -47,7 +47,7 @@ const Carts = () => {
   const updateQuantity = async (id, change) => {
     const updatedCart = cartItems.map(item =>
       item.id === id
-        ? { ...item, quantity: Math.max(1, (item.quantity || 1) + change) } // Default to 1 if quantity is undefined or less than 1
+        ? { ...item, quantity: Math.max(1, (item.quantity || 1) + change) } 
         : item
     );
     setCartItems(updatedCart);
@@ -77,7 +77,7 @@ const Carts = () => {
               <p className="price">${item.price}</p>
               <div className="quantity-controls">
                 <button onClick={() => updateQuantity(item.id, -1)}>-</button>
-                <span>{item.quantity || 1}</span> {/* Default to 1 if quantity is undefined */}
+                <span>{item.quantity || 1}</span> 
                 <button onClick={() => updateQuantity(item.id, 1)}>+</button>
               </div>
               <button onClick={() => removeFromCart(item.id)} className="remove-btn">

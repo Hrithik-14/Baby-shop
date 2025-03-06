@@ -105,7 +105,7 @@ const Login = () => {
                 Remember Me
               </label>
               <button type="submit" onClick={() => navigate('/productlist')} disabled={loading}> 
-                 Log In
+                Log In
               </button>
               <button type="button" onClick={() => navigate('/register')}>Sign Up</button>
             </div>

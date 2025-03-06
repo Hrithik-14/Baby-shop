@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
   }
   
-  /* Back button styling */
+
   .back-button {
     background-color: #007bff;
     color: white;
@@ -22,7 +22,7 @@
     background-color: #0056b3;
   }
   
-  /* Product detail section styling */
+  
   .product-detail {
     display: flex;
     gap: 30px;
@@ -33,7 +33,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Product image styling */
+  
   .product-detail img {
     max-width: 400px;
     width: 100%;
@@ -41,7 +41,7 @@
     object-fit: cover;
   }
   
-  /* Product information styling */
+  
   .product-info {
     flex: 1;
   }
@@ -66,7 +66,7 @@
     margin-bottom: 20px;
   }
   
- 
+
   .add-to-cart-btn {
     background-color: #28a745;
     color: white;
@@ -89,7 +89,7 @@
     font-size: 20px;
   }
   
-  /* Responsive design for smaller screens */
+  
   @media (max-width: 768px) {
     .product-detail {
       flex-direction: column;

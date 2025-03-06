@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { FaEye } from 'react-icons/fa'; // Importing the eye icon
+import { FaEye } from 'react-icons/fa'; 
 
 function Profile() {
-  const [users, setUsers] = useState([]); // Store user data
+  const [users, setUsers] = useState([]); 
 
   useEffect(() => {
-    // Fetch all users
+    
     const fetchUsers = async () => {
       try {
         const response = await axios.get("http://localhost:4001/users");
@@ -41,7 +41,7 @@ function Profile() {
   );
 }
 
-// CSS styles
+
 const styles = {
   sectionHeader: {
     fontSize: "24px",

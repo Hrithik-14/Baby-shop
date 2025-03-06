@@ -4,7 +4,7 @@ import axios from 'axios';
 import './Paymentreport.css';
 
 const Paymentreport = () => {
-    const userId = localStorage.getItem('userId'); 
+    const userId = localStorage.getItem('userId');
     const [cart, setCart] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -24,67 +24,66 @@ const Paymentreport = () => {
         fetchCart();
     }, [userId]);
 
-    
     const totalPrice = cart.reduce((total, product) => {
-        const price = product.price ? parseFloat(product.price) : 0; 
-        const quantity = product.quantity ? parseInt(product.quantity, 10) : 1; 
+        const price = product.price ? parseFloat(product.price) : 0;
+        const quantity = product.quantity ? parseInt(product.quantity, 10) : 1;
         return total + price * quantity;
     }, 0);
 
     return (
-        <div className="min-h-screen bg-gray-100 py-10">
-            <div className="container mx-auto px-4">
-                <h1 className="text-3xl font-bold text-center mb-8">Payment</h1>
+        <div className="payment-report">
+            <div className="payment-container">
+                <h1 className="payment-title">Payment</h1>
 
                 
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                    <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
+                <div className="order-summary">
+                    <h2 className="section-title">Order Summary</h2>
                     {loading ? (
-                        <p>Loading...</p>
+                        <p className="loading-message">Loading...</p>
                     ) : cart.length === 0 ? (
-                        <p>Your cart is empty.</p>
+                        <p className="empty-cart-message">Your cart is empty.</p>
                     ) : (
-                        <div className="space-y-4">
+                        <div className="cart-items">
                             {cart.map((product) => (
-                                <div key={product.id} className="flex justify-between items-center border-b pb-4">
-                                    <div className="flex items-center">
+                                <div key={product.id} className="cart-item">
+                                    <div className="item-details">
                                         <img
                                             src={product.image}
                                             alt={product.name}
-                                            className="w-16 h-16 object-cover rounded-lg"
+                                            className="item-image"
                                         />
-                                        <div className="ml-4">
-                                            <h3 className="text-lg font-medium">{product.name}</h3>
-                                            <p className="text-sm text-gray-600">Quantity: {product.quantity}</p>
+                                        <div className="item-info">
+                                            <h3 className="item-name">{product.name}</h3>
+                                            <p className="item-quantity">Quantity: {product.quantity}</p>
                                         </div>
                                     </div>
-                                    <p className="text-lg font-semibold">
+                                    <p className="item-price">
                                         ${((product.price || 0) * (product.quantity || 1)).toFixed(2)}
                                     </p>
                                 </div>
                             ))}
                         </div>
                     )}
-                    <div className="mt-6 flex justify-between items-center">
-                        <h3 className="text-xl font-semibold">Total</h3>
-                        <p className="text-xl font-semibold">${totalPrice.toFixed(2)}</p>
+                    <div className="total-section">
+                        <h3 className="total-label">Total</h3>
+                        <p className="total-price">${totalPrice.toFixed(2)}</p>
                     </div>
                 </div>
 
                 
-                <div className="bg-white p-6 rounded-lg shadow-md mt-8">
-                    <h2 className="text-xl font-semibold mb-4">Payment Method</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
+                <div className="payment-method">
+                    <h2 className="section-title">Payment Method</h2>
+                    <div className="method-options">
+                        <div className="method-option">
                             <input
                                 type="radio"
                                 id="cashOnDelivery"
                                 name="paymentMethod"
                                 value="cashOnDelivery"
-                                className="w-5 h-5"
+                                className="method-radio"
                                 defaultChecked
                             />
-                            <label htmlFor="cashOnDelivery" className="ml-2 text-lg">
+                            <label htmlFor="cashOnDelivery" className="method-label">
                                 Cash on Delivery
                             </label>
                         </div>
@@ -92,10 +91,10 @@ const Paymentreport = () => {
                 </div>
 
                 
-                <div className="mt-8 text-center">
+                <div className="confirm-order">
                     <Link
                         to={`/cart?total=${totalPrice.toFixed(2)}`}
-                        className="bg-green-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-600 transition duration-300"
+                        className="confirm-button"
                     >
                         Confirm Order (${totalPrice.toFixed(2)})
                     </Link>

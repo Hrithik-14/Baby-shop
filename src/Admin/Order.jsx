@@ -15,7 +15,7 @@ function Order() {
     try {
       const response = await axios.get("http://localhost:4001/users");
       setUsers(response.data);
-      // After fetching users, get orders from each user
+      
       fetchOrders(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);

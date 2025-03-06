@@ -8,18 +8,17 @@
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     padding-bottom: 300px;
-    /* margin: 0 auto; */
-    /* padding: 20px; */
+    
     margin-top: 20px;
    
   }
   
   .prd {
-    /* display: flex; */
+    
     margin-top: 500px;
     text-align: center;
     justify-content: center;
-    /* margin-bottom: 40px; */
+    
     color: #333;
   }
   

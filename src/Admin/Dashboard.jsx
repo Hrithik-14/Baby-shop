@@ -8,7 +8,6 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch data from json-server
     const fetchData = async () => {
       try {
         const productsResponse = await axios.get("http://localhost:4001/products");
@@ -33,7 +32,6 @@ const Dashboard = () => {
     <div className="dashboard">
       <h1>Admin Dashboard</h1>
 
-
       <section className="users-section">
         <h2>Users</h2>
         <div className="user-list">
@@ -43,9 +41,10 @@ const Dashboard = () => {
               <p>Email: {user.email}</p>
               <p>Role: {user.role || "Customer"}</p>
               <p>Joined: {new Date(user.createdAt).toLocaleDateString()}</p>
-              {user.orders && user.orders.length > 0 && (
+
+              <h4>Orders:</h4>
+              {user.orders && user.orders.length > 0 ? (
                 <div>
-                  <h4>Orders:</h4>
                   {user.orders.map((order) => (
                     <div key={order.id} className="order-card">
                       <p>Product: {order.name}</p>
@@ -55,6 +54,8 @@ const Dashboard = () => {
                     </div>
                   ))}
                 </div>
+              ) : (
+                <p>No orders</p> 
               )}
             </div>
           ))}
