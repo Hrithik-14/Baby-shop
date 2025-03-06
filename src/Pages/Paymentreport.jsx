@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Paymentreport.css';
 
@@ -7,6 +7,8 @@ const Paymentreport = () => {
     const userId = localStorage.getItem('userId');
     const [cart, setCart] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchCart = async () => {
@@ -16,7 +18,7 @@ const Paymentreport = () => {
                 setCart(response.data.cart || []);
             } catch (error) {
                 console.error('Error fetching cart:', error);
-                alert('Failed to fetch cart. Please try again.');
+                setError('Failed to fetch cart. Please try again.');
             } finally {
                 setLoading(false);
             }
@@ -30,16 +32,28 @@ const Paymentreport = () => {
         return total + price * quantity;
     }, 0);
 
+    const handleConfirmOrder = async () => {
+        try {
+            await axios.patch(`http://localhost:4001/users/${userId}`, { cart: [] });
+            alert('Order confirmed successfully!');
+            navigate('/orders');
+        } catch (error) {
+            console.error('Error confirming order:', error);
+            alert('Failed to confirm order. Please try again.');
+        }
+    };
+
     return (
         <div className="payment-report">
             <div className="payment-container">
                 <h1 className="payment-title">Payment</h1>
 
-                
                 <div className="order-summary">
                     <h2 className="section-title">Order Summary</h2>
                     {loading ? (
                         <p className="loading-message">Loading...</p>
+                    ) : error ? (
+                        <p className="error-message">{error}</p>
                     ) : cart.length === 0 ? (
                         <p className="empty-cart-message">Your cart is empty.</p>
                     ) : (
@@ -48,7 +62,7 @@ const Paymentreport = () => {
                                 <div key={product.id} className="cart-item">
                                     <div className="item-details">
                                         <img
-                                            src={product.image}
+                                            src={product.image1} 
                                             alt={product.name}
                                             className="item-image"
                                         />
@@ -70,7 +84,6 @@ const Paymentreport = () => {
                     </div>
                 </div>
 
-                
                 <div className="payment-method">
                     <h2 className="section-title">Payment Method</h2>
                     <div className="method-options">
@@ -90,14 +103,13 @@ const Paymentreport = () => {
                     </div>
                 </div>
 
-                
                 <div className="confirm-order">
-                    <Link
-                        to={`/cart?total=${totalPrice.toFixed(2)}`}
+                    <button
+                        onClick={handleConfirmOrder}
                         className="confirm-button"
                     >
                         Confirm Order (${totalPrice.toFixed(2)})
-                    </Link>
+                    </button>
                 </div>
             </div>
         </div>

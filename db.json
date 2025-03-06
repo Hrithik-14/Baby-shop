@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Baby Stroller",
-      "price": 150,
+      "price": "159",
       "description": "Ergonomic design with easy grip.",
       "category": "Stroller",
       "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
@@ -49,6 +49,13 @@
       "image1": "https://m.media-amazon.com/images/I/711c-uf6AFL._SL1500_.jpg",
       "image2": "https://m.media-amazon.com/images/I/71cH6aE0tbL._SL1500_.jpg",
       "image3": "https://m.media-amazon.com/images/I/71WLh4aaR-L._SL1500_.jpg"
+    },
+    {
+      "id": "abf2",
+      "name": "baby drinks",
+      "price": "127",
+      "category": "Drink",
+      "image1": "https://www.babyorgano.com/cdn/shop/files/Hing_Roll-On_1800x1800.png?v=1740403366"
     }
   ],
   "users": [
@@ -94,17 +101,28 @@
       "cart": [],
       "orders": [
         {
-          "id": "2",
-          "name": "Baby Bottle",
-          "price": 15,
-          "description": "Ergonomic design with easy grip.",
-          "category": "Bottle",
-          "image1": "https://www.bigbasket.com/media/uploads/p/xxl/40142595_1-chicco-baby-feeding-bottle-with-twin-anti-colic-system-blue-6m.jpg",
-          "image2": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTpKJiQpgocWPWdcYrZLS0sXNqaPROS3LoE9E8aj7pvle80PfHe2azVAh1GFv_Bu3HxvWRQwixnx4JlXXpvHKL70HIZcIuDOy1vq-x57FtKbqIOjtWarzq6UQ",
-          "image3": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRJ6D4Fi30etb5fWPa3DlNMNEQH3WBN004Hz_MUezK5aBFEkSTkzrJVcLaa6BGHybnGSDrzpFanWfHs8nKGtcCL1ERJaeSqhsTRFYFPDS_62UpW82tvc5sxIA",
+          "id": "4",
+          "name": "Baby Dress",
+          "price": 50,
+          "description": "A comfortable and safe stroller for your baby.",
+          "category": "Dress",
+          "image1": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/24dec2021/ZB604-1.jpg",
+          "image2": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/24dec2021/ZB604-2.jpg",
+          "image3": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQeCNh5gYdat_JJr7oVcBcLFwrazNCrBCK1Z-VUac39glPF5Hhw95O9PlEGuzFV8He42_DbvIE0pTNGt4bIJII0ndR-BNkzpA",
+          "quantity": 5,
           "userId": "5490",
+          "date": "2025-03-06T10:13:14.999Z",
+          "status": "Processing"
+        },
+        {
+          "id": "abf2",
+          "name": "baby drinks",
+          "price": "127",
+          "category": "Drink",
+          "image1": "https://www.babyorgano.com/cdn/shop/files/Hing_Roll-On_1800x1800.png?v=1740403366",
           "quantity": 2,
-          "date": "2023-10-05T14:00:00Z",
+          "userId": "5490",
+          "date": "2025-03-06T10:13:14.999Z",
           "status": "Processing"
         }
       ]
@@ -117,6 +135,25 @@
       "createdAt": "2023-10-06T15:00:00Z",
       "cart": [],
       "orders": []
+    },
+    {
+      "id": "d704",
+      "name": "faizy",
+      "email": "faizy@gmail.com",
+      "password": "1234",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Baby Stroller",
+          "price": 150,
+          "description": "Ergonomic design with easy grip.",
+          "category": "Stroller",
+          "image1": "https://media.hunyhuny.com/12181-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+          "image2": "https://media.hunyhuny.com/11388-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+          "image3": "https://media.hunyhuny.com/11264-large_default/stroller-pram-reversible-seat-adjustable-handle-bar-khakhee.jpg",
+          "quantity": 2
+        }
+      ]
     }
   ]
 }

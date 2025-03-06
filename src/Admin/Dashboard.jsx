@@ -50,13 +50,13 @@ const Dashboard = () => {
                       <p>Product: {order.name}</p>
                       <p>Quantity: {order.quantity}</p>
                       <p>Status: {order.status}</p>
-                      <p>Date: {new Date(order.date).toLocaleDateString()}</p>
+                    <p>Date: {new Date(order.date).toLocaleDateString()}</p>
                     </div>
-                  ))}
+                ))}
                 </div>
-              ) : (
+            ) : (
                 <p>No orders</p> 
-              )}
+            )}
             </div>
           ))}
         </div>
@@ -66,4 +66,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
 
