@@ -24,10 +24,10 @@ const Paymentreport = () => {
         fetchCart();
     }, [userId]);
 
-    // Calculate total price correctly
+    
     const totalPrice = cart.reduce((total, product) => {
-        const price = product.price ? parseFloat(product.price) : 0; // Ensure price is a number
-        const quantity = product.quantity ? parseInt(product.quantity, 10) : 1; // Ensure quantity is a number
+        const price = product.price ? parseFloat(product.price) : 0; 
+        const quantity = product.quantity ? parseInt(product.quantity, 10) : 1; 
         return total + price * quantity;
     }, 0);
 
@@ -36,7 +36,7 @@ const Paymentreport = () => {
             <div className="container mx-auto px-4">
                 <h1 className="text-3xl font-bold text-center mb-8">Payment</h1>
 
-                {/* Order Summary */}
+                
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
                     {loading ? (
@@ -71,7 +71,7 @@ const Paymentreport = () => {
                     </div>
                 </div>
 
-                {/* Payment Method */}
+                
                 <div className="bg-white p-6 rounded-lg shadow-md mt-8">
                     <h2 className="text-xl font-semibold mb-4">Payment Method</h2>
                     <div className="space-y-4">
@@ -91,7 +91,7 @@ const Paymentreport = () => {
                     </div>
                 </div>
 
-                {/* Confirm Order Button */}
+                
                 <div className="mt-8 text-center">
                     <Link
                         to={`/cart?total=${totalPrice.toFixed(2)}`}

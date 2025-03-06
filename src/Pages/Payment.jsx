@@ -57,10 +57,11 @@ const Payment = () => {
 
     await axios.patch(`http://localhost:4001/users/${userId}`, { cart: [] });
     setCartItems([]);
+    navigate("/paymentreport");
     alert("Payment Successful! Your order has been placed.");
     
 
-    navigate("/orders");
+    
   } catch (error) {
     console.error("Error processing payment:", error);
     alert("Payment failed. Please try again.");
