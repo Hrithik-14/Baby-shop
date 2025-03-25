@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   const userId = localStorage.getItem("userId");
 
   useEffect(() => {

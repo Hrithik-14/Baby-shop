@@ -19,7 +19,7 @@ function Home() {
             handpicked designs ensure comfort and joy for your little ones.
           </p>
           <button onClick={() =>{
-            navigate('/products')
+            navigate('/productlist')
           }}  className="shop-now">Shop Now</button>
         </div>
         <div className="babyimg">

@@ -25,6 +25,7 @@ import Dashboard from "./Admin/Dashboard.jsx";
 const AppContent = () => {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith("/admin");
+  const [cartItems, setCartItems] = useState([])
 
   return (
     <div className="app-container">
@@ -38,9 +39,9 @@ const AppContent = () => {
         <div className="page-content">
           <Routes>
             {/* Public Routes */}
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home car />} />
             <Route path="/search" element={<Search />} />
-            <Route path="/productlist" element={<ProductList />} />
+            <Route path="/productlist" element={<ProductList cartItems={cartItems} setCartItems={setCartItems} />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/payment" element={<Payment />} />

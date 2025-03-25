@@ -15,7 +15,7 @@ const Products = () => {
   const [addFormData, setAddFormData] = useState({ 
     name: "", 
     price: "", 
-    category: "", 
+    category: "",                                     
     image1: "" 
   }); // Form data for adding
 
