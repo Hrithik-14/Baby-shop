@@ -25,7 +25,6 @@ const Products = () => {
       .then(response => setProducts(response.data))
       .catch(error => console.error("Error fetching products:", error));
   }, []);
-
   // Handle delete
   const handleDelete = async (id) => {
     try {
@@ -90,6 +89,8 @@ const Products = () => {
     }
   };
 
+
+  
   return (
     <div className="admin-container">
       <h2 className="admin-title">Admin Panel</h2>

@@ -49,6 +49,7 @@ const Login = () => {
         }
       } else {
         setError('Invalid email or password.');
+        
       }
     } catch (error) {
       console.error('Error logging in:', error);

@@ -66,8 +66,6 @@ const Navbar = () => {
                     handleLogout();
                   }
                 }}
-
-
               >
                 
                 <option onClick={() =>{ navigate('/login')}} value="">{userName}</option>
